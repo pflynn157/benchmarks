@@ -16,8 +16,7 @@
 #include <stdio.h>
 #include <string.h>
 
-#include "common.h"
-#include "../text_input_16k.h"
+#include "text_input_16k.h"
 #include "crc.h"
 
 void crc_test(void)
