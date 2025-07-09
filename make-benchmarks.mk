@@ -15,11 +15,13 @@
 #		aes \
 #		picojpeg
 
+# activity_rec
+
 # aes
 # crc
 # dijkstra
 BENCHMARKS := \
-		activity_rec
+		adpcm_encode
 
 # Get the different configuration targets from benchmark-build
 CONFIGURATIONS := $(shell benchmark-build targets)
