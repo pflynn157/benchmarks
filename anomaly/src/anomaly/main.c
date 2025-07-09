@@ -7,6 +7,8 @@
 #include "svm.h"
 #include "data.h"
 
+#define printf_float(_num) _num
+
 // RMS and crest factor (peak/RMS) for one channel
 void featurize(double *rms, double *crest, const int16_t *series, size_t len)
 {
