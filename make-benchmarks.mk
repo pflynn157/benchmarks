@@ -16,8 +16,9 @@
 #		picojpeg
 
 # crc
+# dijkstra
 BENCHMARKS := \
-		dijkstra
+		aes
 
 # Get the different configuration targets from benchmark-build
 CONFIGURATIONS := $(shell benchmark-build targets)
