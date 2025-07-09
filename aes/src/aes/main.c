@@ -28,7 +28,7 @@ static void print_char_array(uint8_t *arr, uint8_t len, const char* label)
     printf("\r\n");
 }
 
-int benchmark_main(void)
+int main(void)
 {
     printf("Mode: CBC\r\n");
     print_char_array(key, 16, "Key");
