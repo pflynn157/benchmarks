@@ -21,8 +21,9 @@
 # anomaly
 # crc
 # dijkstra
+# sha256
 BENCHMARKS := \
-		sha256
+		stringsearch
 
 # Get the different configuration targets from benchmark-build
 CONFIGURATIONS := $(shell benchmark-build targets)
