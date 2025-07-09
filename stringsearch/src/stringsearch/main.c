@@ -17,6 +17,8 @@
 #include <string.h>
 #include <stdio.h>
 
+#define UCHAR_MAX 255
+
 static size_t table[UCHAR_MAX + 1];
 static size_t len;
 static char *findme;
