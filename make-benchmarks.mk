@@ -21,7 +21,7 @@
 # crc
 # dijkstra
 BENCHMARKS := \
-		adpcm_encode
+		anomaly
 
 # Get the different configuration targets from benchmark-build
 CONFIGURATIONS := $(shell benchmark-build targets)
