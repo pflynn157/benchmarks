@@ -18,10 +18,11 @@
 # activity_rec
 
 # aes
+# anomaly
 # crc
 # dijkstra
 BENCHMARKS := \
-		anomaly
+		sha256
 
 # Get the different configuration targets from benchmark-build
 CONFIGURATIONS := $(shell benchmark-build targets)
