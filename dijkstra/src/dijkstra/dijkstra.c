@@ -1,8 +1,8 @@
+#include "printf.h"
 #include <stdio.h>
 #include <stdlib.h>
 
 #include "input.h"
-#include "common.h"
 
 #define NONE 255
 
