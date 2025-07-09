@@ -150,7 +150,7 @@ uint16_t dijkstra(uint16_t chStart, uint16_t chEnd)
     return 0;
 }
 
-int benchmark_main(void)
+int main(void)
 {
     uint16_t i, j;
     g_qCount = 0;
