@@ -4,6 +4,8 @@
 #include <math.h>
 #include <stdint.h>
 
+#define printf_float(_num) _num
+
 #include "fourier.h"
 
 const uint32_t MAXSIZE = 256;       // small 4096, 8192 inverse, 512 for memory-limited systems
