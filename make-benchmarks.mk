@@ -25,7 +25,7 @@
 # sha256
 # stringsearch
 BENCHMARKS := \
-		rsa
+		image_class
 
 # Get the different configuration targets from benchmark-build
 CONFIGURATIONS := $(shell benchmark-build targets)
