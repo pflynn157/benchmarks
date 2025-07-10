@@ -7,8 +7,11 @@ add_executable(${PROJECT_NAME}
     crc/main.c
 
     # Other
-    portme/printf.c
+    portme/checksum.c
+    portme/common.c
+    portme/mainmain.c
     portme/printfmap.c
+    portme/supportFuncs.c
     ${STARTUP_CODE}
     )
 
