@@ -4,7 +4,6 @@
 #include <string.h>
 #include <stdlib.h>
 #include <math.h>
-#include "common.h"
 #define GRANULE_SIZE 576
 /* Include arch-specific instructions,
  * when defined. */
