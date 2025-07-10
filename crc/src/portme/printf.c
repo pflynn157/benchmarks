@@ -890,7 +890,8 @@ static double reduce_double_precision(double value)
     return round(value * PRECISION) / PRECISION;
 }
 
-void printf_checksum(const char *fmt, ...)
+//void printf_checksum(const char *fmt, ...)
+void printf_(const char *fmt, ...)
 {
     va_list args;
     va_start(args, fmt);
@@ -976,7 +977,7 @@ void printf_checksum(const char *fmt, ...)
 
 ///////////////////////////////////////////////////////////////////////////////
 
-int printf_(const char* format, ...)
+/*int printf_(const char* format, ...)
 {
   va_list va;
   va_start(va, format);
@@ -984,7 +985,7 @@ int printf_(const char* format, ...)
   const int ret = _vsnprintf(_out_char, buffer, (size_t)-1, format, va);
   va_end(va);
   return ret;
-}
+}*/
 
 
 int sprintf_(char* buffer, const char* format, ...)
