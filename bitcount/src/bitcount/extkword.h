@@ -27,8 +27,6 @@
 #ifndef EXTKWORD__H
 #define EXTKWORD__H
 
-#include <limits.h>                       /* For INT_MAX, LONG_MAX      */
-
 /*
 **  Watcom defines __FLAT__ for 32-bit environments and so will we
 */

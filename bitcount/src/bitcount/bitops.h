@@ -19,7 +19,6 @@
 #include <stdio.h>
 #include <stdint.h>   /* For uint32_t         */
 #include <stdlib.h>   /* For size_t           */
-#include <limits.h>   /* For CHAR_BIT         */
 #include "sniptype.h" /* For TOBOOL()         */
 
 /*
