@@ -29,8 +29,9 @@
 # stringsearch
 # susan_corners
 # susan_edges
+# susan_smooth
 BENCHMARKS := \
-		susan_smooth
+		crc
 
 # Get the different configuration targets from benchmark-build
 CONFIGURATIONS := $(shell benchmark-build targets)
