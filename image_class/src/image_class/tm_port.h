@@ -13,8 +13,6 @@ limitations under the License.
 #ifndef __TM_PORT_H
 #define __TM_PORT_H
 
-#include "common.h"
-
 #define TM_ARCH_CPU         (0) //default, pure cpu compute
 #define TM_ARCH_ARM_SIMD    (1) //ARM Cortex M4/M7, etc.
 #define TM_ARCH_ARM_NEON    (2) //ARM Cortex A7, etc.
