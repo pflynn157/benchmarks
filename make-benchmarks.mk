@@ -22,10 +22,11 @@
 # crc
 # dijkstra
 # fft
+# lorawan_down
 # sha256
 # stringsearch
 BENCHMARKS := \
-		lorawan_down
+		lorawan_up
 
 # Get the different configuration targets from benchmark-build
 CONFIGURATIONS := $(shell benchmark-build targets)
