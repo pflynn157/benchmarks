@@ -21,10 +21,11 @@
 # anomaly
 # crc
 # dijkstra
+# fft
 # sha256
 # stringsearch
 BENCHMARKS := \
-		fft
+		rsa
 
 # Get the different configuration targets from benchmark-build
 CONFIGURATIONS := $(shell benchmark-build targets)
