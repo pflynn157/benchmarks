@@ -30,13 +30,12 @@
  * ERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
  * OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-
+#include "printf.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <stdint.h>
 
-#include "common.h"
 #include "lzfx.h"
 
 #define LZFX_HSIZE (1 << (LZFX_HLOG))
