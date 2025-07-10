@@ -28,7 +28,7 @@
 
 #include "bitops.h"
 
-void bitstring(char *str, long byze, int biz, int strwid)
+void bitstring(char *str, uint32_t byze, int biz, int strwid)
 {
     int i, j;
 
