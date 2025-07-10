@@ -21,6 +21,8 @@
 #include <stdlib.h>   /* For size_t           */
 #include "sniptype.h" /* For TOBOOL()         */
 
+#define CHAR_BIT 8
+
 /*
 **  Macros to manipulate bits in any integral data type.
 */
