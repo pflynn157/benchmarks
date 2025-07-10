@@ -1,10 +1,9 @@
 /* Copyright 2019 SiFive, Inc */
 /* SPDX-License-Identifier: Apache-2.0 */
-
+#include "printf.h"
 #include <stdio.h>
 #include <stdint.h>
 #include <string.h>
-#include "common.h"
 
 #define CHACHA20_IMPLEMENTATION
 #define CHACHA20_NO_UNDEF
@@ -113,7 +112,7 @@ int check_decrypt()
 }
 
 
-int benchmark_main(void)
+int main(void)
 {
     print_hex("Key", key, sizeof(key));
     print_hex("Nonce", nonce, sizeof(nonce));
