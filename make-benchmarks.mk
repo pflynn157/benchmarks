@@ -30,7 +30,7 @@
 # susan_edges
 # susan_smooth
 BENCHMARKS := \
-		fft
+		poly1305
 
 # Get the different configuration targets from benchmark-build
 CONFIGURATIONS := $(shell benchmark-build targets)
