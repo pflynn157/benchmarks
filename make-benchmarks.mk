@@ -26,7 +26,7 @@
 # sha256
 # stringsearch
 BENCHMARKS := \
-		mp3_encode
+		patricia
 
 # Get the different configuration targets from benchmark-build
 CONFIGURATIONS := $(shell benchmark-build targets)
