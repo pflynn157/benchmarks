@@ -31,7 +31,7 @@
 # susan_edges
 # susan_smooth
 BENCHMARKS := \
-		crc
+		dijkstra
 
 # Get the different configuration targets from benchmark-build
 CONFIGURATIONS := $(shell benchmark-build targets)

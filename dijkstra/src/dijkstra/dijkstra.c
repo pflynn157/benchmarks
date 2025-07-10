@@ -163,5 +163,9 @@ int main(void)
         j = j % NUM_NODES;
         dijkstra(i, j);
     }
+    
+    uint32_t checksum = get_benchmark_checksum();
+    hexstring(checksum);
+    
     return 0;
 }
