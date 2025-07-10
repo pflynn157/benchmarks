@@ -25,7 +25,7 @@
 # sha256
 # stringsearch
 BENCHMARKS := \
-		jpeg_encode
+		lorawan_down
 
 # Get the different configuration targets from benchmark-build
 CONFIGURATIONS := $(shell benchmark-build targets)
