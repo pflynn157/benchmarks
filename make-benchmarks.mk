@@ -28,9 +28,8 @@
 # stringsearch
 # susan_corners
 # susan_edges
-# susan_smooth
 BENCHMARKS := \
-		sha256
+		stringsearch
 
 # Get the different configuration targets from benchmark-build
 CONFIGURATIONS := $(shell benchmark-build targets)
