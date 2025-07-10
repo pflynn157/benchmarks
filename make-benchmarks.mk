@@ -28,6 +28,7 @@
 # sha256
 # stringsearch
 # susan_corners
+# susan_edges
 BENCHMARKS := \
 		susan_edges
 
