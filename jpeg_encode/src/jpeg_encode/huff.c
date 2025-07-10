@@ -24,6 +24,8 @@
 #include "huff.h"
 #include "conf.h"
 
+#define CHAR_BIT 8
+
 #ifdef WORD_BIT
 #define JPEC_INT_WIDTH WORD_BIT
 #else
