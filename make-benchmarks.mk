@@ -16,7 +16,6 @@
 #		picojpeg
 
 # activity_rec
-
 # aes
 # anomaly
 # crc
@@ -31,7 +30,7 @@
 # susan_edges
 # susan_smooth
 BENCHMARKS := \
-		dijkstra
+		activity_rec
 
 # Get the different configuration targets from benchmark-build
 CONFIGURATIONS := $(shell benchmark-build targets)
