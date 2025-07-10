@@ -38,6 +38,9 @@ int main(void)
     test_encrypt_cbc();
     printf("\r\n");
     test_decrypt_cbc();
+    
+    uint32_t checksum = get_benchmark_checksum();
+    hexstring(checksum);
 
     return 0;
 }

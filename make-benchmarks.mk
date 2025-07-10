@@ -30,7 +30,7 @@
 # susan_edges
 # susan_smooth
 BENCHMARKS := \
-		activity_rec
+		aes
 
 # Get the different configuration targets from benchmark-build
 CONFIGURATIONS := $(shell benchmark-build targets)
