@@ -3,6 +3,8 @@
 #include <math.h>
 #include "snipmath.h"
 
+#define printf_float(_num) _num
+
 /* The printf's may be removed to isolate just the math calculations */
 
 int main(void)
