@@ -9,10 +9,9 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 ==============================================================================*/
-
+#include "printf.h"
 #include "stdio.h"
 #include "tinymaix.h"
-#include "common.h"
 
 #include "mnist_resnet_q.h"
 
@@ -133,7 +132,7 @@ static void parse_output(tm_mat_t* outs)
 
 static uint8_t mdl_buf[4800];
 
-int benchmark_main(void)
+int main(void)
 {
     printf("mnist demo\n");
     tm_mdl_t mdl;
