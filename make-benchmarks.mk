@@ -30,7 +30,7 @@
 # susan_corners
 # susan_edges
 BENCHMARKS := \
-		susan_edges
+		susan_smooth
 
 # Get the different configuration targets from benchmark-build
 CONFIGURATIONS := $(shell benchmark-build targets)
