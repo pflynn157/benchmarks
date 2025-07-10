@@ -10,6 +10,8 @@
 #include <stdio.h>
 #include "snipmath.h"
 
+#define printf_float(_num) _num
+
 void SolveCubic(double a,
                 double b,
                 double c,
