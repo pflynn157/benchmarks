@@ -643,8 +643,8 @@ int32_t main()
     //put_image(in, x_size, y_size);
 #endif // HOST_TEST
 
-    uint32_t checksum = get_benchmark_checksum();
-    hexstring(checksum);
+    uint32_t ck = get_benchmark_checksum();
+    hexstring(ck);
 
     return 0;
 }
