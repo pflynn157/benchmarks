@@ -6,12 +6,12 @@
 #define NO_OPT __attribute__((optimize("O0")))
 #endif
 
-/*NO_OPT
+NO_OPT
 int putc(int character, void *stream)
 {
     (void)stream;
     return character;
-}*/
+}
 
 NO_OPT
 void _putchar(char character) {
