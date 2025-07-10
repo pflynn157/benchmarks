@@ -52,6 +52,9 @@ int main()
     printf("%08X\r\n", crc);
     noprint_output = crc;
     (void)noprint_output;
+    
+    uint32_t checksum = get_benchmark_checksum();
+    hexstring(checksum);
 
     return 0;
 }
