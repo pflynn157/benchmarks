@@ -24,7 +24,7 @@
 # sha256
 # stringsearch
 BENCHMARKS := \
-		bitcount
+		chacha20
 
 # Get the different configuration targets from benchmark-build
 CONFIGURATIONS := $(shell benchmark-build targets)
