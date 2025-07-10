@@ -9,7 +9,6 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "snipmath.h"
-#include "common.h"
 
 void SolveCubic(double a,
                 double b,
