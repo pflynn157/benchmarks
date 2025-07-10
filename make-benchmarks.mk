@@ -23,10 +23,11 @@
 # dijkstra
 # fft
 # lorawan_down
+# poly1305
 # sha256
 # stringsearch
 BENCHMARKS := \
-		poly1305
+		qsort
 
 # Get the different configuration targets from benchmark-build
 CONFIGURATIONS := $(shell benchmark-build targets)
