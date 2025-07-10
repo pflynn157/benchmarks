@@ -6,6 +6,8 @@
 
 #define UNLIMIT
 
+#define printf_float(_num) _num
+
 int32_t compare(const void *elem1, const void *elem2)
 {
     /* D = [(x1 - x2)^2 + (y1 - y2)^2 + (z1 - z2)^2]^(1/2) */
