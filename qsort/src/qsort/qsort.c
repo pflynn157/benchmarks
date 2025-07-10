@@ -39,5 +39,9 @@ int main(void)
     {
         printf("%7d  %7d  %7d  =>  %8.2f\r\n", vertices[i].x, vertices[i].y, vertices[i].z, printf_float(vertices[i].distance));
     }
+    
+    uint32_t checksum = get_benchmark_checksum();
+    hexstring(checksum);
+    
     return 0;
 }

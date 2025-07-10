@@ -101,6 +101,9 @@ int main()
     {
         printf("DATA MESSAGE PARSE error (%d)", ret);
     }
+    
+    uint32_t checksum = get_benchmark_checksum();
+    hexstring(checksum);
 
     return 0;
 }

@@ -1709,6 +1709,9 @@ int main()
         }
         printf("\r\n");
     }
+    
+    uint32_t checksum = get_benchmark_checksum();
+    hexstring(checksum);
 
     return 0;
 }

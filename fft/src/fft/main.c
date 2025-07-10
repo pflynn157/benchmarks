@@ -112,6 +112,9 @@ int main(void)
     fft_float(MAXSIZE, TRUE, RealIn, ImagIn, RealOut, ImagOut);
     printf_float_array("RealOut", RealOut, MAXSIZE);
     printf_float_array("ImagOut", ImagOut, MAXSIZE);
+    
+    uint32_t checksum = get_benchmark_checksum();
+    hexstring(checksum);
 
     return 0;
 }

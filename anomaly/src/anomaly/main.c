@@ -91,6 +91,9 @@ int main(void)
 
     noprint_output = pred_featurized;
     (void)noprint_output;
+    
+    uint32_t checksum = get_benchmark_checksum();
+    hexstring(checksum);
 
     return 0;
 }

@@ -29,6 +29,9 @@ int main(int argc, char *argv[])
     sha256_final(&ctx, hash);
 
     print_hash(hash);
+    
+    uint32_t checksum = get_benchmark_checksum();
+    hexstring(checksum);
 
     return 0;
 }

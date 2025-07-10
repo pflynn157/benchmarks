@@ -38,6 +38,9 @@ int main(int argc, char *argv[])
     Poly1305_Final(&ctx, hash);
 
     print_hash(hash);
+    
+    uint32_t checksum = get_benchmark_checksum();
+    hexstring(checksum);
 
     return 0;
 }

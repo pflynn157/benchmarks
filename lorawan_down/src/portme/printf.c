@@ -856,10 +856,157 @@ static int _vsnprintf(out_fct_type out, char* buffer, const size_t maxlen, const
   return (int)idx;
 }
 
+///////////////////////////////////////////////////////////////////////////////
+
+void print_hexstring(uint32_t num)
+{
+    for (uint32_t i = sizeof(num) * 8; i > 0; i -= 4)
+    {
+        uint8_t nibble = (num >> (i - 4)) & 0xF;
+        if (nibble > 9)
+        {
+            _putchar(nibble + 0x37);
+        }
+        else
+        {
+            _putchar(nibble + 0x30);
+        }
+    }
+}
+
+void hexstring(uint32_t num)
+{
+    print_hexstring(num);
+    _putchar('\r');
+    _putchar('\n');
+}
+
+void hexstrings(uint32_t num)
+{
+    print_hexstring(num);
+    _putchar(' ');
+}
+
+
+#define PRECISION 1000      // 3 decimal places
+static uint32_t g_checksum = 0;
+static const char* g_format_modifiers = "1234567890.+#z<>l-h";
+static const char* g_unsupported_modifiers = "Ljt";
+
+uint32_t get_benchmark_checksum(void)
+{
+    return g_checksum;
+}
+
+static inline void add_to_checksum(uint32_t value)
+{
+    g_checksum += value;
+}
+
+static inline bool is_modifier(char c)
+{
+    return strchr(g_format_modifiers, c) != NULL;
+}
+
+static inline bool is_unsupported_modifier(char c)
+{
+    return strchr(g_unsupported_modifiers, c) != NULL;
+}
+
+static double reduce_double_precision(double value)
+{
+    return round(value * PRECISION) / PRECISION;
+}
+
+//void printf_checksum(const char *fmt, ...)
+int printf_(const char *fmt, ...)
+{
+    va_list args;
+    va_start(args, fmt);
+
+    char c = *fmt;
+    char *fmt_start = (char *)fmt;
+    while (c != '\0')
+    {
+        if (c == '%')
+        {
+            c = *(++fmt);
+
+            // Skip format modifiers
+            while (is_modifier(c))
+            {
+                c = *(++fmt);
+            }
+            if (is_unsupported_modifier(c))
+            {
+                puts("Unsupported printf modifier encountered for checksum testing:");
+                putchar(c);
+                puts("\r\n");
+                va_end(args);
+                return 0;
+            }
+            if (c == 's')
+            {
+                const char *str = va_arg(args, const char *);
+                if (str != NULL)
+                {
+                    while (*str != '\0')
+                    {
+                        add_to_checksum((uint8_t)(*str));
+                        str++;
+                    }
+                }
+            }
+            else if (c == 'f')
+            {
+                double num = va_arg(args, double);
+                num = reduce_double_precision(num);
+                uint32_t upper32 = *((uint32_t *)&num);
+                uint32_t lower32 = *((uint32_t *)&num + 1);
+                add_to_checksum(upper32);
+                add_to_checksum(lower32);
+            }
+            else if ((c == 'd') || (c == 'i') || (c == 'u') || (c == 'x') || (c == 'X') || (c == 'c'))
+            {
+                if (*(fmt - 1) == 'l')
+                {
+                    if ((fmt - 2 > fmt_start) && (*(fmt - 2) == 'l'))
+                    {
+                        long long num = va_arg(args, long long);
+                        add_to_checksum((uint32_t)(num >> 32));
+                        add_to_checksum((uint32_t)(num & 0xFFFFFFFF));
+                    }
+                    else
+                    {
+                        puts("%l not supported for architecture independent checksum testing. Use %ll instead.");
+                    }
+                }
+                else
+                {
+                    int num = va_arg(args, int);
+                    add_to_checksum((uint32_t)num);
+                }
+            }
+            else if (c != '%')
+            {
+                puts("Unsupported printf format specifier encountered for checksum testing:");
+                putchar(c);
+                puts("\r\n");
+                va_end(args);
+                return 0;
+            }
+        }
+        c = *(++fmt);
+    }
+
+    va_end(args);
+    return 0;
+}
+
 
 ///////////////////////////////////////////////////////////////////////////////
 
-int printf_(const char* format, ...)
+/*int printf_(const char* format, ...)
 {
   va_list va;
   va_start(va, format);
@@ -867,7 +1014,7 @@ int printf_(const char* format, ...)
   const int ret = _vsnprintf(_out_char, buffer, (size_t)-1, format, va);
   va_end(va);
   return ret;
-}
+}*/
 
 
 int sprintf_(char* buffer, const char* format, ...)
