@@ -891,7 +891,7 @@ static double reduce_double_precision(double value)
 }
 
 //void printf_checksum(const char *fmt, ...)
-int printf_(const char *fmt, ...)
+int printf_(const char *format, ...)
 {
     va_list args;
     va_start(args, fmt);
