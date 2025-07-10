@@ -3,8 +3,9 @@
 #include <stdlib.h>
 #include <math.h>
 #include <stdint.h>
-#include <stdbool.h>
 
+#define TRUE  1
+#define FALSE 0
 #define printf_float(_num) _num
 
 #include "fourier.h"
