@@ -14,6 +14,8 @@ limitations under the License.
 #include "float.h"
 #include "math.h"
 
+#define printf_float(_num) _num
+
 #if TM_OPT_LEVEL == TM_OPT0
 
 #if TM_ARCH==TM_ARCH_CPU

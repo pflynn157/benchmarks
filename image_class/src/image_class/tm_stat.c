@@ -12,6 +12,8 @@ limitations under the License.
 
 #include "tinymaix.h"
 
+#define printf_float(_num) _num
+
 #if TM_ENABLE_STAT
 static const char* mdl_type_str[6] = {
     "int8",   
