@@ -891,7 +891,7 @@ static double reduce_double_precision(double value)
 }
 
 //void printf_checksum(const char *fmt, ...)
-void printf_(const char *fmt, ...)
+int printf_(const char *fmt, ...)
 {
     va_list args;
     va_start(args, fmt);
@@ -915,7 +915,7 @@ void printf_(const char *fmt, ...)
                 putchar(c);
                 puts("\r\n");
                 va_end(args);
-                return;
+                return 0;
             }
             if (c == 's')
             {
@@ -965,13 +965,14 @@ void printf_(const char *fmt, ...)
                 putchar(c);
                 puts("\r\n");
                 va_end(args);
-                return;
+                return 0;
             }
         }
         c = *(++fmt);
     }
 
     va_end(args);
+    return 0;
 }
 
 
