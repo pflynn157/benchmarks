@@ -15,6 +15,8 @@ limitations under the License.
 
 #include "mnist_resnet_q.h"
 
+#define printf_float(_num) _num
+
 #if 1
 uint8_t mnist_pic[28*28]={
   0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
