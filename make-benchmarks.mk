@@ -29,7 +29,7 @@
 # susan_corners
 # susan_edges
 BENCHMARKS := \
-		stringsearch
+		susan_corners
 
 # Get the different configuration targets from benchmark-build
 CONFIGURATIONS := $(shell benchmark-build targets)
