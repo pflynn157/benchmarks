@@ -26,7 +26,7 @@
 # sha256
 # stringsearch
 BENCHMARKS := \
-		patricia
+		poly1305
 
 # Get the different configuration targets from benchmark-build
 CONFIGURATIONS := $(shell benchmark-build targets)
