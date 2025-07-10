@@ -858,6 +858,34 @@ static int _vsnprintf(out_fct_type out, char* buffer, const size_t maxlen, const
 
 ///////////////////////////////////////////////////////////////////////////////
 
+void print_hexstring(uint32_t num)
+{
+    for (uint32_t i = sizeof(num) * 8; i > 0; i -= 4)
+    {
+        uint8_t nibble = (num >> (i - 4)) & 0xF;
+        if (nibble > 9)
+        {
+            _putchar(nibble + 0x37);
+        }
+        else
+        {
+            _putchar(nibble + 0x30);
+        }
+    }
+}
+
+void hexstring(uint32_t num)
+{
+    print_hexstring(num);
+    _putchar('\r');
+    _putchar('\n');
+}
+
+void hexstrings(uint32_t num)
+{
+    print_hexstring(num);
+    _putchar(' ');
+}
 
 
 #define PRECISION 1000      // 3 decimal places
