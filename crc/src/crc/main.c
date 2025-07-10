@@ -12,7 +12,7 @@
  * notice must not be changed or removed and no warranty is either
  * expressed or implied by its publication or distribution.
  **********************************************************************/
-#include "common.h"
+#include "printf.h"
 #include <stdio.h>
 #include <string.h>
 
@@ -42,8 +42,7 @@ void crc_test(void)
     crcFast(test, 9);
 }
 
-
-int benchmark_main(void)
+int main()
 {
     crcInit();
     volatile uint32_t noprint_output;
