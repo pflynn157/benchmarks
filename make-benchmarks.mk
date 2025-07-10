@@ -22,8 +22,9 @@
 # crc
 # dijkstra
 # sha256
+# stringsearch
 BENCHMARKS := \
-		stringsearch
+		basicmath
 
 # Get the different configuration targets from benchmark-build
 CONFIGURATIONS := $(shell benchmark-build targets)
