@@ -26,7 +26,7 @@
 # sha256
 # stringsearch
 BENCHMARKS := \
-		lorawan_up
+		lzfx_comp
 
 # Get the different configuration targets from benchmark-build
 CONFIGURATIONS := $(shell benchmark-build targets)
