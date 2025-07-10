@@ -11,7 +11,6 @@ limitations under the License.
 ==============================================================================*/
 
 #include "tinymaix.h"
-#include "common.h"
 
 #if TM_ENABLE_STAT
 static const char* mdl_type_str[6] = {
