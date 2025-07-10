@@ -24,10 +24,11 @@
 # fft
 # lorawan_down
 # poly1305
+# qsort
 # sha256
 # stringsearch
 BENCHMARKS := \
-		qsort
+		susan_corners
 
 # Get the different configuration targets from benchmark-build
 CONFIGURATIONS := $(shell benchmark-build targets)
