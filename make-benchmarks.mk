@@ -26,7 +26,7 @@
 # sha256
 # stringsearch
 BENCHMARKS := \
-		lzfx_decomp
+		mp3_encode
 
 # Get the different configuration targets from benchmark-build
 CONFIGURATIONS := $(shell benchmark-build targets)
