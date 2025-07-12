@@ -30,7 +30,18 @@
 # susan_corners
 # susan_edges
 BENCHMARKS := \
-		susan_smooth
+		aes \
+		anomaly \
+		crc \
+		dijkstra \
+		fft \
+		lorawan_down \
+		poly1305 \
+		qsort \
+		sha256 \
+		stringsearch \
+		susan_corners \
+		susan_edges
 
 # Get the different configuration targets from benchmark-build
 CONFIGURATIONS := $(shell benchmark-build targets)
