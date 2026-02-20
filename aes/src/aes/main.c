@@ -10,7 +10,6 @@
 
 #define INPUT_IMPLEMENTATION
 #include "text_input_1k.h"
-#include "common.h"
 #include "aes.h"
 
 #define TOTAL_ENCRYPTION_SIZE 65536UL // 64 KiB
@@ -41,7 +40,7 @@ static void print_char_array(const uint8_t *arr, uint32_t len, const char* label
     printf("\r\n");
 }
 
-int benchmark_main(void)
+int main(void)
 {
 #if HOST_TEST
     char input_copy[INPUT_SIZE + 1];
