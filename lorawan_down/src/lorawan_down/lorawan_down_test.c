@@ -2,7 +2,6 @@
 #include <string.h>
 #include <stdio.h>
 
-#include "common.h"
 #include "lw.h"
 #include "inputs.h"
 
