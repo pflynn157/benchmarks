@@ -25,7 +25,7 @@ void print_hex_array(const char *preamble, const uint8_t *array, const int len)
     printf("\r\n");
 }
 
-int benchmark_main()
+int main()
 {
     lw_frame_t frame;
     lw_key_grp_t kgrp;
