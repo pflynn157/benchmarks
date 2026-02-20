@@ -2,7 +2,6 @@
 #include <string.h>
 #include <stdio.h>
 
-#include "common.h"
 #include "lw.h"
 #include "inputs.h"
 #define ITERATIONS 50
@@ -42,7 +41,7 @@ void print_output_message_details(const lw_frame_t *frame, const uint8_t *msg, c
     print_hex_array("MIC: ", frame->mic.buf, 4);
 }
 
-int benchmark_main()
+int main()
 {
     lw_node_t endnode;
     lw_frame_t frame;
