@@ -1,8 +1,8 @@
-#include "printf.h"
 #include <stdint.h>
 #include <string.h>
 #include <stdio.h>
 
+#include "common.h"
 #include "lw.h"
 #include "inputs.h"
 #define ITERATIONS 50
@@ -14,10 +14,13 @@ void print_hex_array(const char* preamble, const uint8_t *array, const int len)
         printf("%s", preamble);
     }
 
-    printf("0x");
     for (int i = 0; i < len; i++)
     {
-        printf("%02X", array[i]);
+        printf("%02X ", array[i]);
+        if ((i + 1) % 32 == 0)
+        {
+            printf("\r\n");
+        }
     }
     printf("\r\n");
 }
@@ -39,7 +42,7 @@ void print_output_message_details(const lw_frame_t *frame, const uint8_t *msg, c
     print_hex_array("MIC: ", frame->mic.buf, 4);
 }
 
-int main()
+int benchmark_main()
 {
     lw_node_t endnode;
     lw_frame_t frame;
@@ -49,7 +52,7 @@ int main()
     lw_init(US915);
 
     // Print input data parameters
-    printf("Device Address: %#08X\r\n", g_dev_address);
+    printf("Device Address: %#08lX\r\n", g_dev_address);
     print_hex_array("App EUI: ", g_app_eui, 8);
     print_hex_array("Device EUI: ", g_dev_eui, 8);
     print_hex_array("App Key: ", g_app_key, 16);
