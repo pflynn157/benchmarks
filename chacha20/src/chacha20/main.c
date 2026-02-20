@@ -4,7 +4,6 @@
 #include <stdio.h>
 #include <stdint.h>
 #include <string.h>
-#include "common.h"
 
 #define INPUT_IMPLEMENTATION
 #include "text_input_1k.h"
@@ -59,7 +58,7 @@ int check_decrypt()
 }
 
 
-int benchmark_main(void)
+int main(void)
 {
     print_char_array(key, sizeof(key), "Key");
     print_char_array(nonce, sizeof(nonce), "Nonce");
